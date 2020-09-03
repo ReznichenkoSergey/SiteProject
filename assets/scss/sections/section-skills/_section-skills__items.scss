@@ -2,11 +2,14 @@
     margin-bottom: 20px;
     display: grid;
     grid-gap: 10px;
-    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+    grid-template-areas: 
+        "a1 a1 a2 a3" 
+        "a4 a5 a5 a6" 
+        "a7 a8 a9 a6";
 }
 
 .skill-item{
-    background-color: #2d3651;
+    background-color: $color-primary;
     min-height: calc(33.333vh - 13.333px);
     position: relative;
     overflow: hidden;
@@ -29,7 +32,7 @@
         right: 0;
         bottom: 0;
         background-position: 50% 50%;
-        background-color: #2d3651;
+        background-color: $color-primary;
         background-size: cover;
         z-index: 1;
         opacity: 80%;
@@ -67,62 +70,70 @@
         }
         
         .skill-item__link{
-            color: #d66926;
+            color: $color-accent;
         }
     }
 
     @for $i from 1 through 9 {
         &:nth-of-type(#{$i}){
-            grid-area: a#{$i};    
+            grid-area: a#{$i};
+            min-height: calc(230px - 20px * 0.66);    
         }
     }
 }
-/*
-.skill-item:hover .skill-item__overlay{
-    opacity: 0.95;
+
+@include lg-min {
+.skill__container {
+    grid-gap: 10px;
+    grid-template-areas:
+        "a1 a1 a2 a3"
+        "a4 a5 a5 a6"
+        "a7 a8 a9 a6";
+    grid-template-columns: repeat(4, 1fr);
+}
 }
 
-.skill-item:hover .skill-item__image{
-    transform: scale(1.1);
+@include lg-md {
+.skill__container {
+    grid-gap: 10px;
+    grid-template-areas:
+        "a1 a1 a2"
+        "a3 a4 a4"
+        "a5 a5 a6"
+        "a7 a8 a6"
+        "a7 a9 a9";
+    grid-template-columns: repeat(3, 1fr);
+}
 }
 
-.skill-item:hover .skill-item__link{
-    color: #d66926;
+@include md-sm {
+.skill__container {
+    grid-gap: 10px;
+    grid-template-areas:
+        "a1 a2"
+        "a3 a2"
+        "a4 a4"
+        "a5 a6"
+        "a5 a7"
+        "a8 a9";
+    grid-template-columns: 1fr 1fr;
+}
 }
 
-*//*
-.skill-item:nth-of-type(1){
-    grid-area: a1;
-}
 
-.skill-item:nth-of-type(2){
-    grid-area: a2;
+@include sm{
+.skill__container {
+    grid-gap: 20px;
+    grid-template-areas:
+        "a1"
+        "a2"
+        "a3"
+        "a4"
+        "a5"
+        "a6"
+        "a7"
+        "a8"
+        "a9";
+    grid-template-columns: 1fr;
 }
-
-.skill-item:nth-of-type(3){
-    grid-area: a3;
 }
-
-.skill-item:nth-of-type(4){
-    grid-area: a4;
-}
-
-.skill-item:nth-of-type(5){
-    grid-area: a5;
-}
-
-.skill-item:nth-of-type(6){
-    grid-area: a6;
-}
-
-.skill-item:nth-of-type(7){
-    grid-area: a7;
-}
-
-.skill-item:nth-of-type(8){
-    grid-area: a8;
-}
-
-.skill-item:nth-of-type(9){
-    grid-area: a9;
-}*/

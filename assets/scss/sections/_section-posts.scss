@@ -1,0 +1,232 @@
+.post {
+    min-height: 100vh;
+    background-color: $color-light;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+
+    &__container{
+        max-width: 1340px;
+        width: 100%;
+        margin: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    &__articles{
+
+        display: grid;
+        gap:$gap;
+        grid-template-areas: 
+            "d1 d1 d2 d3" 
+            "d4 d5 d6 d6";
+        grid-template-columns: repeat(4, 1fr);
+        padding-bottom: 20px;
+    }
+}
+/*
+@media (min-width: 992px){
+.post__container>h2 {
+    margin-bottom: 56px;
+    font-size: 2.5rem;
+}
+}*/
+/*
+@media (min-width: 992px){
+.posts {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+}*/
+
+//@media (min-width: 992px){
+@include lg-min {
+.post__articles {
+    grid-template-areas:
+        "d1 d1 d2 d3"
+        "d4 d5 d6 d6";
+    grid-template-columns: repeat(4, 1fr);
+}
+.posts {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.post__container>h2 {
+    margin-bottom: 56px;
+    font-size: 2.5rem;
+}
+}
+/*
+@media (max-width: 991.8px) and (min-width: 768px){
+.posts {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+}
+
+@media (max-width: 991.8px) and (min-width: 768px){
+.post__container>h2 {
+    margin-bottom: 42px;
+    font-size: 2rem;
+}
+}*/
+
+//@media (max-width: 991.8px) and (min-width: 768px){
+@include lg-md {
+.post__articles {
+    grid-template-areas:
+        "d1 d1 d2"
+        "d3 d4 d4"
+        "d5 d5 d6";
+    grid-template-columns: repeat(3, 1fr);
+}
+.posts {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.post__container>h2 {
+    margin-bottom: 42px;
+    font-size: 2rem;
+}
+}
+
+@include md{
+//@media (max-width: 767.8px){
+.posts {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+}
+
+//@media (max-width: 767.8px) and (min-width: 576px){
+@include md-sm {
+.post__articles {
+    grid-template-areas:
+        "d1 d2"
+        "d3 d4"
+        "d5 d6";
+    grid-template-columns: 1fr 1fr;
+}
+.post__container>h2 {
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+}
+}
+/*
+@media (max-width: 767.8px) and (min-width: 576px){
+.post__container>h2 {
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+}
+}*/
+
+//@media (max-width: 575.8px){
+@include sm {
+.post__articles {
+    grid-template-areas:
+        "d1"
+        "d2"
+        "d3"
+        "d4"
+        "d5"
+        "d6";
+    grid-template-columns: 1fr;
+}
+.post__container>h2 {
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+}
+/*
+@media (max-width: 575.8px){
+.post__container>h2 {
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+}*/
+
+.post-item {
+    transition: background-color 0.5s;
+    background-color: lighten($color-gray-light, 5%);
+        
+    &:hover {
+        background-color: darken($color-gray-light, 5%);
+        
+        & .post-item__text h3{
+            color: $color-primary;
+        }
+        & .post-item__text p{
+            color: $color-primary;
+        }
+
+        & .post-item__image{
+            transform: scale(1.1);
+        }
+    }
+
+    &__link{
+        display: grid;
+        overflow: hidden;
+        height: 100%;
+        grid-template-rows: 300px 1fr;
+    }
+
+    &__image{
+        display: flex;
+        overflow: hidden;
+        align-content: center;
+        justify-content: center;
+        background-color: $color-primary;
+        background-position: 50% 50%;
+        transition: transform 0.5s;
+
+        &  img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__text{
+        display: grid;
+        align-content: center;
+        padding: $gap;
+
+        & h3{
+            transition: color 0.5s;
+            text-align: center;
+            letter-spacing: 0.05em;
+            font-family: $font-header;
+            color: $color-gray;
+            font-size: 1.125rem;
+        }
+
+        & p{
+            transition: color 0.5s;
+            text-align: center;
+        }
+    }
+}
+
+@for $i from 1 through 6{
+    .post-item:nth-of-type(#{$i}){
+        grid-area: d#{$i};
+    }
+}
+
+.post-button{
+    display: flex;
+    justify-content: center;
+
+    &>.btn-accent:hover{
+        border-color: $color-primary;
+    }
+}
+
+
+
+
+
+
+
