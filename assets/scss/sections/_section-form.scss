@@ -15,20 +15,20 @@
     }
 }
 
-.form-item{
+.form-item {
     display: block;
 
-    & .btn-accent{
+    & .btn-accent {
         min-width: 0px;
     }
 
-    &:nth-of-type(1){
+    &:nth-of-type(1) {
         grid-area: c1;
     }
-    &:nth-of-type(2){
+    &:nth-of-type(2) {
         grid-area: c2;
     }
-    &:nth-of-type(3){
+    &:nth-of-type(3) {
         grid-area: c3;
     }
     &__input {
@@ -44,14 +44,14 @@
         background-color: #ffffff0d;
         transition: background-color 0.5s, border-color 0.5s;
         font-size: 1.125rem;
-        
-        &:hover, 
+
+        &:hover,
         &:focus {
             border-color: #ffffff26;
             border-bottom-color: $color-light;
             background-color: #ffffff26;
             color: $color-light;
-            outline: none
+            outline: none;
         }
     }
 }
@@ -60,7 +60,7 @@ input {
     overflow: visible;
 }
 
-.form-item .btn-accent{
+.form-item .btn-accent {
     width: 100%;
     color: $color-light;
     border-color: #ffffff00;
@@ -69,40 +69,39 @@ input {
     transition: background-color 0.5s, border-color 0.5s;
 }
 
-.btn-accent:hover, 
+.btn-accent:hover,
 .btn-accent:focus {
     background-color: $color-accent;
     border: 2px solid $color-light;
 }
 
 @include lg-min {
-.form__container {
-    grid-template-columns: repeat(3, 1fr);
-}
+    .form__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @include lg-md {
-.form__container {
-    grid-template-columns: repeat(3, 1fr);
-}
+    .form__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @include md-sm {
-.form__container {
-    grid-template: 
-        "c1 c1" 
-        "c2 c3";
-    grid-template-columns: 1fr 1fr;
-}
+    .form__container {
+        grid-template:
+            "c1 c1"
+            "c2 c3";
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @include sm {
-.form__container {
-    grid-template: 
-        "c1" 
-        "c2" 
-        "c3";
-    grid-template-columns: 1fr;
+    .form__container {
+        grid-template:
+            "c1"
+            "c2"
+            "c3";
+        grid-template-columns: 1fr;
+    }
 }
-}
-

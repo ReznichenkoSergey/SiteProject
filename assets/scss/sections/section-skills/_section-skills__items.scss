@@ -1,14 +1,14 @@
-.skill__container{
+.skill__container {
     margin-bottom: 20px;
     display: grid;
     grid-gap: 10px;
-    grid-template-areas: 
-        "a1 a1 a2 a3" 
-        "a4 a5 a5 a6" 
+    grid-template-areas:
+        "a1 a1 a2 a3"
+        "a4 a5 a5 a6"
         "a7 a8 a9 a6";
 }
 
-.skill-item{
+.skill-item {
     background-color: $color-primary;
     min-height: calc(33.333vh - 13.333px);
     position: relative;
@@ -38,7 +38,7 @@
         opacity: 80%;
         transition: opacity 0.5s;
     }
-    
+
     &__title {
         position: absolute;
         top: 0;
@@ -60,80 +60,79 @@
         letter-spacing: 0.1em;
     }
 
-    &:hover{
-        .skill-item__overlay{
+    &:hover {
+        .skill-item__overlay {
             opacity: 0.95;
         }
 
-        .skill-item__image{
+        .skill-item__image {
             transform: scale(1.1);
         }
-        
-        .skill-item__link{
+
+        .skill-item__link {
             color: $color-accent;
         }
     }
 
     @for $i from 1 through 9 {
-        &:nth-of-type(#{$i}){
+        &:nth-of-type(#{$i}) {
             grid-area: a#{$i};
-            min-height: calc(230px - 20px * 0.66);    
+            min-height: calc(230px - 20px * 0.66);
         }
     }
 }
 
 @include lg-min {
-.skill__container {
-    grid-gap: 10px;
-    grid-template-areas:
-        "a1 a1 a2 a3"
-        "a4 a5 a5 a6"
-        "a7 a8 a9 a6";
-    grid-template-columns: repeat(4, 1fr);
-}
+    .skill__container {
+        grid-gap: 10px;
+        grid-template-areas:
+            "a1 a1 a2 a3"
+            "a4 a5 a5 a6"
+            "a7 a8 a9 a6";
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @include lg-md {
-.skill__container {
-    grid-gap: 10px;
-    grid-template-areas:
-        "a1 a1 a2"
-        "a3 a4 a4"
-        "a5 a5 a6"
-        "a7 a8 a6"
-        "a7 a9 a9";
-    grid-template-columns: repeat(3, 1fr);
-}
+    .skill__container {
+        grid-gap: 10px;
+        grid-template-areas:
+            "a1 a1 a2"
+            "a3 a4 a4"
+            "a5 a5 a6"
+            "a7 a8 a6"
+            "a7 a9 a9";
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @include md-sm {
-.skill__container {
-    grid-gap: 10px;
-    grid-template-areas:
-        "a1 a2"
-        "a3 a2"
-        "a4 a4"
-        "a5 a6"
-        "a5 a7"
-        "a8 a9";
-    grid-template-columns: 1fr 1fr;
-}
+    .skill__container {
+        grid-gap: 10px;
+        grid-template-areas:
+            "a1 a2"
+            "a3 a2"
+            "a4 a4"
+            "a5 a6"
+            "a5 a7"
+            "a8 a9";
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-
-@include sm{
-.skill__container {
-    grid-gap: 20px;
-    grid-template-areas:
-        "a1"
-        "a2"
-        "a3"
-        "a4"
-        "a5"
-        "a6"
-        "a7"
-        "a8"
-        "a9";
-    grid-template-columns: 1fr;
-}
+@include sm {
+    .skill__container {
+        grid-gap: 20px;
+        grid-template-areas:
+            "a1"
+            "a2"
+            "a3"
+            "a4"
+            "a5"
+            "a6"
+            "a7"
+            "a8"
+            "a9";
+        grid-template-columns: 1fr;
+    }
 }

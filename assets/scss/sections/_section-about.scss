@@ -1,11 +1,11 @@
-.about{
+.about {
     display: block;
     padding-top: 100px;
     padding-bottom: 73px;
     background-color: $color-gray-light;
     letter-spacing: 0.055em;
 
-    &__container{
+    &__container {
         max-width: 1340px;
         margin: auto;
         padding-right: 20px;
@@ -13,19 +13,19 @@
         display: grid;
         grid-gap: 100px;
         grid-template-areas: "b1 b2";
-        grid-template-columns: 1fr 271px;    
+        grid-template-columns: 1fr 271px;
     }
 
-    &__image{
+    &__image {
         grid-area: b2;
         justify-content: center;
         display: flex;
         align-items: center;
-        &  img{
+        & img {
             max-width: 100%;
             max-height: 480px;
         }
-        & vl{
+        & vl {
             border-left: 2px solid lighten($color-gray, 39%);
             height: 200px;
             position: relative;
@@ -33,9 +33,9 @@
         }
     }
 
-    &__content{
+    &__content {
         grid-area: b1;
-        &  p {
+        & p {
             font-size: 1.125rem;
             margin-top: 0px;
             margin-bottom: 18px;
@@ -53,52 +53,51 @@
 }
 
 @include lg-min {
-.about__container {
-    grid-gap: 100px;
-    grid-template-columns: 1fr 271px;
-}
+    .about__container {
+        grid-gap: 100px;
+        grid-template-columns: 1fr 271px;
+    }
 }
 
 @include lg-md {
-.about__container {
-    grid-gap: 40px;
-    grid-template-columns: 1fr 271px;
-}
+    .about__container {
+        grid-gap: 40px;
+        grid-template-columns: 1fr 271px;
+    }
 
-.about__content h2 {
-    margin-bottom: 42px;
-    font-size: 2rem;
-}
+    .about__content h2 {
+        margin-bottom: 42px;
+        font-size: 2rem;
+    }
 }
 
 @include md-sm {
-.about__container {
-    grid-gap: 20px;
-    grid-template-columns: 1fr 236px;
-}
-vl {
-    right: 0%;
-}
+    .about__container {
+        grid-gap: 20px;
+        grid-template-columns: 1fr 236px;
+    }
+    vl {
+        right: 0%;
+    }
 
-.about__content h2 {
-    margin-bottom: 36px;
-    font-size: 1.5rem;
-}
-
+    .about__content h2 {
+        margin-bottom: 36px;
+        font-size: 1.5rem;
+    }
 }
 
 @include sm {
-.about__container {
-    grid-gap: 20px;
-    grid-template-areas: "b1" "b2";
-    grid-template-columns: 1fr;
-}
-vl {
-    display: none;
-}
-.about__content h2 {
-    margin-bottom: 36px;
-    text-align: center;
-    font-size: 1.5rem;
-}
+    .about__container {
+        grid-gap: 20px;
+        grid-template-areas: "b1" "b2";
+        grid-template-columns: 1fr;
+    }
+    vl {
+        display: none;
+    }
+    .about__content h2 {
+        margin-bottom: 36px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
 }

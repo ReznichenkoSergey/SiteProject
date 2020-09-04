@@ -651,9 +651,9 @@ a {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -667,9 +667,9 @@ a {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .header-navbar__btn span:nth-child(even) {
@@ -776,81 +776,6 @@ a {
   margin-right: 20px;
 }
 
-/*
-@media (min-width: 992px){
-.header-content__title {
-    margin: 0 0 53px;
-}
-}*/
-
-/*
-@media (max-width: 991.8px) and (min-width: 768px){
-.header-content__buttons .btn {
-    min-width: 200px;
-    height: 50px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    letter-spacing: 0.1em;
-    font-size: 1rem;
-}
-}*/
-
-/*
-@media (max-width: 767.8px){
-h1 {
-    font-size: 1.875rem;
-}
-}*/
-
-/*
-@media (max-width: 767.8px) and (min-width: 576px){
-.header-content__buttons .btn {
-    min-width: 170px;
-    height: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    letter-spacing: 0.05em;
-    font-size: 1rem;
-}
-}*/
-
-/*
-@media (max-width: 575.8px){
-.header-content__buttons .btn:not(:last-of-type) {
-    margin-right: 0px;
-    margin-bottom: 20px;
-}
-}
-
-@media (max-width: 575.8px){
-.header-content__buttons .btn {
-    min-width: 170px;
-    height: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    letter-spacing: 0.05em;
-    font-size: 1rem;
-}
-}*/
-/*
-.header-content__title {
-    color: #ffffff;
-    text-align: center;
-    font-weight: 300;
-    margin: 0 0 54px 0;
-    letter-spacing: 0.08em;
-    line-height: 1.2;
-}
-
-.header-content__buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.header-content__buttons .btn:first-of-type {
-    margin-right: 20px;
-}
-*/
 .skills {
   padding: 10px;
   margin-bottom: 30px;
@@ -869,7 +794,7 @@ h1 {
   margin-bottom: 20px;
   display: grid;
   grid-gap: 10px;
-  grid-template-areas: "a1 a1 a2 a3"  "a4 a5 a5 a6"  "a7 a8 a9 a6";
+  grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
 }
 
 .skill-item {
@@ -1144,173 +1069,6 @@ input {
   border: 2px solid #ffffff;
 }
 
-/*.posts {
-    min-height: 100vh;
-    background-color: $color-light;
-    display: flex;
-    align-items: center;
-    padding: 100px 0;
-
-    &__container {
-        max-width: 1340px;
-        width: 100%;
-        margin: auto;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-
-    &__grid {
-
-        display: grid;
-        gap: $gap;
-        padding-bottom: $gap;
-    }
-
-    &-button {
-        display: flex;
-        justify-content: center;
-    
-        &>.btn-accent:hover {
-            border-color: $color-primary;
-        }
-    }    
-}
-
-.post-item {
-    transition: background-color 0.5s;
-    background-color: lighten($color-gray-light, 5%);
-        
-    &:hover {
-        background-color: darken($color-gray-light, 5%);
-        
-        & .post-item__caption h3 {
-            color: $color-primary;
-        }
-        & .post-item__caption p {
-            color: $color-primary;
-        }
-
-        & .post-item__image {
-            transform: scale(1.1);
-        }
-    }
-
-    &__link {
-        display: grid;
-        overflow: hidden;
-        height: 100%;
-        grid-template-rows: 300px 1fr;
-    }
-
-    &__image {
-        display: flex;
-        overflow: hidden;
-        align-content: center;
-        justify-content: center;
-        transition: transform 0.5s;
-
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &__caption {
-        display: grid;
-        align-content: center;
-        padding: $gap;
-
-        & h3 {
-            transition: color 0.5s;
-            text-align: center;
-            letter-spacing: 0.05em;
-            font-family: $font-header;
-            color: $color-gray;
-            font-size: 1.125rem;
-        }
-
-        & p {
-            transition: color 0.5s;
-            text-align: center;
-        }
-    }
-}
-
-@include lg-min {
-.posts__grid {
-    grid-template-areas:
-        "d1 d1 d2 d3"
-        "d4 d5 d6 d6";
-    grid-template-columns: repeat(4, 1fr);
-}
-.posts {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-.post__container>h2 {
-    margin-bottom: 56px;
-    font-size: 2.5rem;
-}
-}
-
-@include lg-md {
-.posts__grid {
-    grid-template-areas:
-        "d1 d1 d2"
-        "d3 d4 d4"
-        "d5 d5 d6";
-    grid-template-columns: repeat(3, 1fr);
-}
-.posts {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-.post__container>h2 {
-    margin-bottom: 42px;
-    font-size: 2rem;
-}
-}
-
-@include md {
-.posts {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-}
-
-@include md-sm {
-.posts__grid {
-    grid-template-areas:
-        "d1 d2"
-        "d3 d4"
-        "d5 d6";
-    grid-template-columns: 1fr 1fr;
-}
-.post__container>h2 {
-    margin-bottom: 36px;
-    font-size: 1.5rem;
-}
-}
-
-@include sm {
-.posts__grid {
-    grid-template-areas:
-        "d1"
-        "d2"
-        "d3"
-        "d4"
-        "d5"
-        "d6";
-    grid-template-columns: 1fr;
-}
-.post__container>h2 {
-    margin-bottom: 36px;
-    text-align: center;
-    font-size: 1.5rem;
-}
-}
-
-*/
 .posts {
   min-height: 100vh;
   background-color: #ffffff;
@@ -1335,36 +1093,6 @@ input {
   display: grid;
   padding-bottom: 20px;
   grid-gap: 20px;
-  /*@include lg-min {
-        grid-template-areas: 
-            "d1 d1 d2 d3" 
-            "d4 d5 d6 d6";
-        grid-template-columns: repeat(4, 1fr);
-      }
-      @include lg-md {
-        grid-template-areas: 
-            "d1 d1 d2" 
-            "d3 d4 d4" 
-            "d5 d5 d6";
-        grid-template-columns: repeat(3, 1fr);
-      }
-      @include md-sm {
-        grid-template-areas: 
-            "d1 d2" 
-            "d3 d4" 
-            "d5 d6";
-        grid-template-columns: 1fr 1fr;
-      }
-      @include sm {
-        grid-template-areas: 
-            "d1"
-            "d2" 
-            "d3" 
-            "d4" 
-            "d5" 
-            "d6";
-        grid-template-columns: 1fr;
-      }*/
 }
 
 .posts__button {
@@ -1750,7 +1478,7 @@ input {
     font-size: 1.5rem;
   }
   .form__container {
-    grid-template: "c1 c1"  "c2 c3";
+    grid-template: "c1 c1" "c2 c3";
     grid-template-columns: 1fr 1fr;
   }
   .posts__grid {
@@ -1804,7 +1532,7 @@ input {
     font-size: 1.5rem;
   }
   .form__container {
-    grid-template: "c1"  "c2"  "c3";
+    grid-template: "c1" "c2" "c3";
     grid-template-columns: 1fr;
   }
   .posts__grid {
