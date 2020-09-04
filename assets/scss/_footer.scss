@@ -1,11 +1,11 @@
-.footer{
+.footer {
     padding: 50px 20px 70px;
     max-width: 100%;
     text-align: center;
     background-color: $color-primary;
 }
 
-.footer-container{
+.footer-container {
     max-width: 1340px;
     margin: auto;
     padding-right: 20px;
@@ -13,7 +13,7 @@
 
 }
 
-.footer__icons{    
+.footer__icons {    
     position: relative;
     display: grid;
     justify-content: center;
@@ -21,36 +21,36 @@
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 }
 
-.footer__icons::after{
+.footer__icons::after {
     position: absolute;
     bottom: -20px;
     left: calc(50% - 75px / 2);
     width: 75px;
     height: 2px;
     content: "";
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #ffffff1a;
 
 }
 
-.footer__icons{
+.footer__icons {
     position: relative;
     display: grid;
     margin-bottom: 40px;
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 }
 
-.footer__icons a{
+.footer__icons a {
     display: block;
     padding: 10px;
     transition: color 0.5s;
     
     &:focus,
-    &:hover{
+    &:hover {
         color: $color-accent;
     }
 }
 
-.icon{
+.icon {
     font-family: "Font Awesome 5 Brands";
     font-weight: 400;
     font-size: 36px;
@@ -63,33 +63,33 @@
 
 }
 
-.facebook:before{
+.facebook:before {
     content: "\f082";
 }
 
-.google:before{
+.google:before {
     content: "\f0d4";
 }
 
-.twitter:before{
+.twitter:before {
     content: "\f081";
 }
 
-.pinterest:before{
+.pinterest:before {
     content: "\f0d3";
 }
 
-.flickr:before{
+.flickr:before {
     content: "\f16e";
 }
 
-.footer__about span:first-of-type{
+.footer__about span:first-of-type {
     margin-right: -0.5em;
     letter-spacing: 0.33em;
     font-weight: 100;
 }
 
-.footer__about span:last-of-type{
+.footer__about span:last-of-type {
     letter-spacing: 0.05em;
     color: $color-gray-light;
     font-weight: 700;
