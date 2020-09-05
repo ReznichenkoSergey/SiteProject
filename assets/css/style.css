@@ -1017,7 +1017,7 @@ a {
 
 .form-item__input {
   display: block;
-  font: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0.15em;
   color: #ffffff;
   width: 100%;
