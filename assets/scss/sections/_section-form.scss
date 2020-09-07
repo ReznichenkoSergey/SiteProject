@@ -53,6 +53,11 @@
             color: $color-light;
             outline: none;
         }
+
+        &::placeholder{
+            //color: #557588;
+            color: $color-gray
+        }
     }
 }
 

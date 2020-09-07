@@ -964,7 +964,7 @@ a {
 }
 
 .about__content p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin-top: 0px;
   margin-bottom: 18px;
 }
@@ -1038,6 +1038,26 @@ a {
   background-color: #ffffff26;
   color: #ffffff;
   outline: none;
+}
+
+.form-item__input::-webkit-input-placeholder {
+  color: #637588;
+}
+
+.form-item__input::-moz-placeholder {
+  color: #637588;
+}
+
+.form-item__input:-ms-input-placeholder {
+  color: #637588;
+}
+
+.form-item__input::-ms-input-placeholder {
+  color: #637588;
+}
+
+.form-item__input::placeholder {
+  color: #637588;
 }
 
 input {
@@ -1329,12 +1349,6 @@ input {
   font-weight: 700;
 }
 
-@media (min-height: 691px) {
-  .skill-item {
-    min-height: calc(33.33vh - 20px * 0.66);
-  }
-}
-
 @media (min-width: 768px) {
   .header-navbar__list {
     width: 100%;
@@ -1365,6 +1379,9 @@ input {
   .about__container {
     grid-gap: 100px;
     grid-template-columns: 1fr 271px;
+  }
+  .about__content p {
+    font-size: 1.125rem;
   }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1414,6 +1431,10 @@ input {
     grid-gap: 10px;
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
     grid-template-columns: repeat(3, 1fr);
+  }
+  .about {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .about__container {
     grid-gap: 40px;
@@ -1470,6 +1491,10 @@ input {
   h1 {
     font-size: 1.875rem;
   }
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .posts {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1497,12 +1522,12 @@ input {
     grid-gap: 20px;
     grid-template-columns: 1fr 236px;
   }
-  vl {
-    right: 0%;
-  }
   .about__content h2 {
     margin-bottom: 36px;
     font-size: 1.5rem;
+  }
+  vl {
+    right: 0%;
   }
   .form__container {
     grid-template: "c1 c1" "c2 c3";
@@ -1551,18 +1576,24 @@ input {
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     grid-template-columns: 1fr;
   }
+  .skills-button .btn-accent {
+    width: 100%;
+  }
+  .skills {
+    padding: 20px;
+  }
   .about__container {
     grid-gap: 20px;
     grid-template-areas: "b1" "b2";
     grid-template-columns: 1fr;
   }
-  vl {
-    display: none;
-  }
   .about__content h2 {
     margin-bottom: 36px;
     text-align: center;
     font-size: 1.5rem;
+  }
+  vl {
+    display: none;
   }
   .form__container {
     grid-template: "c1" "c2" "c3";
@@ -1576,5 +1607,8 @@ input {
     margin-bottom: 36px;
     text-align: center;
     font-size: 1.5rem;
+  }
+  .posts__button .btn-accent {
+    width: 100%;
   }
 }

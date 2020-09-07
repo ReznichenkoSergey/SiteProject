@@ -136,11 +136,14 @@
             "a9";
         grid-template-columns: 1fr;
     }
+    .skills-button .btn-accent {
+        width: 100%;
+    }
 }
 
-@media (min-height: 691px) {
-    .skill-item {
-        min-height: calc(33.33vh - 20px * 0.66);
+@media (max-width: 575.8px) {
+    .skills {
+        padding: 20px;
     }
 }
 

@@ -46,6 +46,7 @@
     }
 }
 
+
 @include lg-md {
     .posts__grid {
         grid-template-areas:
@@ -100,6 +101,10 @@
         margin-bottom: 36px;
         text-align: center;
         font-size: 1.5rem;
+    }
+
+    .posts__button .btn-accent{
+        width: 100%;
     }
 }
 

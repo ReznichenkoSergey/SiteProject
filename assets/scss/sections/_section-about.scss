@@ -36,7 +36,7 @@
     &__content {
         grid-area: b1;
         & p {
-            font-size: 1.125rem;
+            font-size: 1rem;
             margin-top: 0px;
             margin-bottom: 18px;
 
@@ -53,51 +53,73 @@
 }
 
 @include lg-min {
-    .about__container {
-        grid-gap: 100px;
-        grid-template-columns: 1fr 271px;
+    .about {
+        &__container {
+            grid-gap: 100px;
+            grid-template-columns: 1fr 271px;
+        }
+        &__content p {
+            font-size: 1.125rem;
+        }
     }
 }
 
 @include lg-md {
-    .about__container {
-        grid-gap: 40px;
-        grid-template-columns: 1fr 271px;
-    }
+    .about {
+        padding-top: 80px;
+        padding-bottom: 80px;
 
-    .about__content h2 {
-        margin-bottom: 42px;
-        font-size: 2rem;
+        &__container {
+            grid-gap: 40px;
+            grid-template-columns: 1fr 271px;
+        }
+
+        &__content h2 {
+            margin-bottom: 42px;
+            font-size: 2rem;
+        }
     }
 }
 
 @include md-sm {
-    .about__container {
-        grid-gap: 20px;
-        grid-template-columns: 1fr 236px;
+    .about {
+        &__container {
+            grid-gap: 20px;
+            grid-template-columns: 1fr 236px;
+        }
+        &__content h2 {
+            margin-bottom: 36px;
+            font-size: 1.5rem;
+        }
     }
     vl {
         right: 0%;
     }
+}
 
-    .about__content h2 {
-        margin-bottom: 36px;
-        font-size: 1.5rem;
+@include md {
+    .about {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }
 
 @include sm {
-    .about__container {
-        grid-gap: 20px;
-        grid-template-areas: "b1" "b2";
-        grid-template-columns: 1fr;
+    .about {
+        &__container {
+            grid-gap: 20px;
+            grid-template-areas: "b1" "b2";
+            grid-template-columns: 1fr;
+        }
+        &__content h2 {
+            margin-bottom: 36px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
     }
     vl {
         display: none;
     }
-    .about__content h2 {
-        margin-bottom: 36px;
-        text-align: center;
-        font-size: 1.5rem;
-    }
 }
+
+
