@@ -1362,6 +1362,9 @@ input {
   .header-navbar__btn {
     display: none;
   }
+  .skill-item__title {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1491,6 +1494,9 @@ input {
   h1 {
     font-size: 1.875rem;
   }
+  .skill-item__title {
+    font-size: 1.125rem;
+  }
   .about {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1577,6 +1583,7 @@ input {
     grid-template-columns: 1fr;
   }
   .skills-button .btn-accent {
+    min-width: auto;
     width: 100%;
   }
   .skills {
@@ -1609,6 +1616,7 @@ input {
     font-size: 1.5rem;
   }
   .posts__button .btn-accent {
+    min-width: auto;
     width: 100%;
   }
 }

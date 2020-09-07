@@ -78,7 +78,6 @@
     @for $i from 1 through 9 {
         &:nth-of-type(#{$i}) {
             grid-area: a#{$i};
-            //min-height: calc(230px - 20px * 0.66);
         }
     }
 }
@@ -107,6 +106,12 @@
     }
 }
 
+@include md-min {
+    .skill-item__title {
+        font-size: 1.25rem;
+    }
+}
+
 @include md-sm {
     .skill__container {
         grid-gap: 10px;
@@ -118,6 +123,12 @@
             "a5 a7"
             "a8 a9";
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767.8px) {
+    .skill-item__title {
+        font-size: 1.125rem;
     }
 }
 
@@ -137,6 +148,7 @@
         grid-template-columns: 1fr;
     }
     .skills-button .btn-accent {
+        min-width: auto;
         width: 100%;
     }
 }
