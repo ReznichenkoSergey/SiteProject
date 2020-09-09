@@ -956,7 +956,6 @@ a {
   border-left: 2px solid #d3d9df;
   height: 200px;
   position: relative;
-  right: 10%;
 }
 
 .about__content {
@@ -1362,7 +1361,7 @@ input {
   .header-navbar__btn {
     display: none;
   }
-  .skill-item__title {
+  .skill-item__title a {
     font-size: 1.25rem;
   }
 }
@@ -1385,6 +1384,9 @@ input {
   }
   .about__content p {
     font-size: 1.125rem;
+  }
+  .about__image vl {
+    right: 50px;
   }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1447,6 +1449,9 @@ input {
     margin-bottom: 42px;
     font-size: 2rem;
   }
+  .about__image vl {
+    right: 20px;
+  }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1494,7 +1499,7 @@ input {
   h1 {
     font-size: 1.875rem;
   }
-  .skill-item__title {
+  .skill-item__title a {
     font-size: 1.125rem;
   }
   .about {
@@ -1532,8 +1537,8 @@ input {
     margin-bottom: 36px;
     font-size: 1.5rem;
   }
-  vl {
-    right: 0%;
+  .about__image vl {
+    right: 10px;
   }
   .form__container {
     grid-template: "c1 c1" "c2 c3";
@@ -1599,7 +1604,7 @@ input {
     text-align: center;
     font-size: 1.5rem;
   }
-  vl {
+  .about__image vl {
     display: none;
   }
   .form__container {

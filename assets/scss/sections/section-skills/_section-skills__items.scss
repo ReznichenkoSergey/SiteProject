@@ -107,7 +107,7 @@
 }
 
 @include md-min {
-    .skill-item__title {
+    .skill-item__title a {
         font-size: 1.25rem;
     }
 }
@@ -127,7 +127,7 @@
 }
 
 @media (max-width: 767.8px) {
-    .skill-item__title {
+    .skill-item__title a {
         font-size: 1.125rem;
     }
 }
