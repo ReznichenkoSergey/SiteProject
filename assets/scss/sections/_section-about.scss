@@ -96,6 +96,14 @@
     }
 }
 
+
+@include md {
+    .about {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
 @include md-sm {
     .about {
         &__container {
@@ -113,13 +121,6 @@
                 }
             }
         }
-    }
-}
-
-@include md {
-    .about {
-        padding-top: 60px;
-        padding-bottom: 60px;
     }
 }
 
