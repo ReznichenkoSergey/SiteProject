@@ -100,13 +100,6 @@ input {
         }
     }
 }
-/*
-@include md {
-    .form {
-        min-height: 100px;
-        padding: 20px 0;
-    }
-}*/
 
 @include md-sm {
     .form {
