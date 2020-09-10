@@ -972,7 +972,7 @@ a {
   content: "";
   position: absolute;
   top: 0;
-  background-color: #D8DADC;
+  background-color: #d8dadc;
   width: 2px;
   height: 200px;
 }
@@ -1619,6 +1619,9 @@ input {
     margin-bottom: 36px;
     text-align: center;
     font-size: 1.5rem;
+  }
+  .about__content p:first-of-type::after {
+    display: none;
   }
   .form__container {
     grid-template: "c1" "c2" "c3";
