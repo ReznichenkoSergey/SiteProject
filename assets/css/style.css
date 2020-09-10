@@ -953,12 +953,6 @@ a {
   max-height: 480px;
 }
 
-.about__image vl {
-  border-left: 2px solid #d3d9df;
-  height: 200px;
-  position: absolute;
-}
-
 .about__content {
   grid-area: b1;
 }
@@ -972,6 +966,15 @@ a {
 .about__content p:first-of-type {
   position: relative;
   margin-top: -5px;
+}
+
+.about__content p:first-of-type::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-color: rgba(99, 117, 136, 0.1);
+  width: 2px;
+  height: 200px;
 }
 
 .about__content p:last-of-type {
@@ -1387,9 +1390,8 @@ input {
   .about__content p {
     font-size: 1.125rem;
   }
-  .about__image vl {
-    right: 341px;
-    top: 252px;
+  .about__content p:first-of-type::after {
+    right: -50px;
   }
   .form {
     min-height: 120px;
@@ -1463,9 +1465,8 @@ input {
     margin-bottom: 42px;
     font-size: 2rem;
   }
-  .about__image vl {
-    top: 198px;
-    right: 311px;
+  .about__content p:first-of-type::after {
+    right: -20px;
   }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1552,9 +1553,8 @@ input {
     margin-bottom: 36px;
     font-size: 1.5rem;
   }
-  .about__image vl {
-    top: 152px;
-    right: 266px;
+  .about__content p:first-of-type::after {
+    right: -10px;
   }
   .form__container {
     grid-template: "c1 c1" "c2 c3";
@@ -1619,9 +1619,6 @@ input {
     margin-bottom: 36px;
     text-align: center;
     font-size: 1.5rem;
-  }
-  .about__image vl {
-    display: none;
   }
   .form__container {
     grid-template: "c1" "c2" "c3";
