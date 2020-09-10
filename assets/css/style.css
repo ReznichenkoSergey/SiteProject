@@ -1085,6 +1085,14 @@ input {
   border: 2px solid #ffffff;
 }
 
+/*
+@include md {
+    .form {
+        min-height: 100px;
+        padding: 20px 0;
+    }
+}*/
+
 .posts {
   min-height: 100vh;
   background-color: #ffffff;
@@ -1429,13 +1437,6 @@ input {
   }
 }
 
-@media (max-width: 991.8px) {
-  .form {
-    min-height: 100px;
-    padding: 20px 0;
-  }
-}
-
 @media (max-width: 991.8px) and (min-width: 768px) {
   .header-content__buttons .btn:not(:last-of-type) {
     margin-right: 20px;
@@ -1467,6 +1468,10 @@ input {
   }
   .about__content p:first-of-type::after {
     right: -20px;
+  }
+  .form {
+    min-height: 100px;
+    padding: 20px 0;
   }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1556,6 +1561,10 @@ input {
   .about__content p:first-of-type::after {
     right: -10px;
   }
+  .form {
+    min-height: 100px;
+    padding: 20px 0;
+  }
   .form__container {
     grid-template: "c1 c1" "c2 c3";
     grid-template-columns: 1fr 1fr;
@@ -1622,6 +1631,10 @@ input {
   }
   .about__content p:first-of-type::after {
     display: none;
+  }
+  .form {
+    min-height: 100px;
+    padding: 20px 0;
   }
   .form__container {
     grid-template: "c1" "c2" "c3";

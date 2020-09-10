@@ -54,8 +54,8 @@
             outline: none;
         }
 
-        &::placeholder{
-            color: $color-gray
+        &::placeholder {
+            color: $color-gray;
         }
     }
 }
@@ -91,34 +91,48 @@ input {
 }
 
 @include lg-md {
-    .form__container {
-        grid-template-columns: repeat(3, 1fr);
+    .form {
+        min-height: 100px;
+        padding: 20px 0;
+
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
-
-@include lg{
-//@media (max-width: 767.9px){
+/*
+@include md {
     .form {
         min-height: 100px;
         padding: 20px 0;
     }
-}
+}*/
 
 @include md-sm {
-    .form__container {
-        grid-template:
-            "c1 c1"
-            "c2 c3";
-        grid-template-columns: 1fr 1fr;
+    .form {
+        min-height: 100px;
+        padding: 20px 0;
+
+        &__container {
+            grid-template:
+                "c1 c1"
+                "c2 c3";
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
 
 @include sm {
-    .form__container {
-        grid-template:
-            "c1"
-            "c2"
-            "c3";
-        grid-template-columns: 1fr;
+    .form {
+        min-height: 100px;
+        padding: 20px 0;
+
+        &__container {
+            grid-template:
+                "c1"
+                "c2"
+                "c3";
+            grid-template-columns: 1fr;
+        }
     }
 }
