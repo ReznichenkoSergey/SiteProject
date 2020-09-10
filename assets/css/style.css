@@ -972,7 +972,7 @@ a {
   content: "";
   position: absolute;
   top: 0;
-  background-color: rgba(99, 117, 136, 0.1);
+  background-color: #D8DADC;
   width: 2px;
   height: 200px;
 }
