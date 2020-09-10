@@ -921,6 +921,7 @@ a {
   padding-bottom: 73px;
   background-color: #e5e5e5;
   letter-spacing: 0.055em;
+  position: relative;
 }
 
 .about__container {
@@ -955,7 +956,7 @@ a {
 .about__image vl {
   border-left: 2px solid #d3d9df;
   height: 200px;
-  position: relative;
+  position: absolute;
 }
 
 .about__content {
@@ -975,6 +976,7 @@ a {
 
 .about__content p:last-of-type {
   margin-bottom: 0px;
+  top: 20px;
 }
 
 .form {
@@ -1386,7 +1388,12 @@ input {
     font-size: 1.125rem;
   }
   .about__image vl {
-    right: 50px;
+    right: 341px;
+    top: 252px;
+  }
+  .form {
+    min-height: 120px;
+    padding: 30px 0;
   }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1420,6 +1427,13 @@ input {
   }
 }
 
+@media (max-width: 991.8px) {
+  .form {
+    min-height: 100px;
+    padding: 20px 0;
+  }
+}
+
 @media (max-width: 991.8px) and (min-width: 768px) {
   .header-content__buttons .btn:not(:last-of-type) {
     margin-right: 20px;
@@ -1450,7 +1464,8 @@ input {
     font-size: 2rem;
   }
   .about__image vl {
-    right: 20px;
+    top: 198px;
+    right: 311px;
   }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1538,7 +1553,8 @@ input {
     font-size: 1.5rem;
   }
   .about__image vl {
-    right: 10px;
+    top: 152px;
+    right: 266px;
   }
   .form__container {
     grid-template: "c1 c1" "c2 c3";

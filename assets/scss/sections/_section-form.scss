@@ -80,14 +80,27 @@ input {
 }
 
 @include lg-min {
-    .form__container {
-        grid-template-columns: repeat(3, 1fr);
+    .form {
+        min-height: 120px;
+        padding: 30px 0;
+
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
 @include lg-md {
     .form__container {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@include lg{
+//@media (max-width: 767.9px){
+    .form {
+        min-height: 100px;
+        padding: 20px 0;
     }
 }
 

@@ -4,6 +4,7 @@
     padding-bottom: 73px;
     background-color: $color-gray-light;
     letter-spacing: 0.055em;
+    position: relative;//
 
     &__container {
         max-width: 1340px;
@@ -28,7 +29,8 @@
         & vl {
             border-left: 2px solid lighten($color-gray, 39%);
             height: 200px;
-            position: relative;
+            //position: relative;
+            position: absolute;
         }
     }
 
@@ -46,6 +48,7 @@
 
             &:last-of-type {
                 margin-bottom: 0px;
+                top: 20px;
             }
         }
     }
@@ -61,7 +64,9 @@
             font-size: 1.125rem;
         }
         &__image vl{
-            right: 50px;
+            //right: 50px;
+            right: 341px;
+            top: 252px;
         }
     }
 }
@@ -81,7 +86,8 @@
             font-size: 2rem;
         }
         &__image vl{
-            right: $gap;
+            top: 198px;
+            right: 311px;
         }
     }
 }
@@ -97,7 +103,8 @@
             font-size: 1.5rem;
         }
         &__image vl{
-            right: 10px;
+            top: 152px;
+            right: 266px;
         }
     }
 }
